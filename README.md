@@ -10,6 +10,6 @@ https://ieeexplore.ieee.org/abstract/document/9837012
 
 # Steps
 ## Preprocessing
-In `src/preprocess.py`, the code takes in video files in `data/video data` and turns them into frame data in `data/frame data` folder. 
+In `src/builddata.py`, the file takes in a video and its corresponding `.src` subtitle file, and builds mini video data and a csv file that contains the lookup table for all the mini videos and their corresponding texual sentences. 
 
 
