@@ -4,17 +4,20 @@ import csv
 import subprocess
 
 # Define paths
-video_path = '/Users/blag/Documents/UChicago MS/2025 Spring/Computer Vision with DL/LipReading_CV/data/video data/Where Do We Go From Here?.mp4'
-subtitle_path = '/Users/blag/Documents/UChicago MS/2025 Spring/Computer Vision with DL/LipReading_CV/data/video data/Where Do We Go From Here?.srt'
-output_dir = '/Users/blag/Documents/UChicago MS/2025 Spring/Computer Vision with DL/LipReading_CV/data/model dataset'
+video_path = '/Users/blag/Documents/UChicago MS/2025 Spring/Computer Vision with DL/LipReading_CV/data/video_data/benchmark1.mp4'
+subtitle_path = '/Users/blag/Documents/UChicago MS/2025 Spring/Computer Vision with DL/LipReading_CV/data/video_data/benchmark1_aligned.srt'
+output_dir = '/Users/blag/Documents/UChicago MS/2025 Spring/Computer Vision with DL/LipReading_CV/data/model_dataset'
 
 
 os.makedirs(output_dir, exist_ok=True)
 subs = pysrt.open(subtitle_path)
 
+'''#Necessary for sentence subtitles, but not needed for word subtitles
+
 # Adjust subtitles: make each end time = next start time (except last)
 for i in range(len(subs) - 1):
     subs[i].end = subs[i + 1].start
+'''
 
 
 # Helper to convert subtitle timestamps to ffmpeg format

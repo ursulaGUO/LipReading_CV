@@ -1,6 +1,5 @@
 import cv2
 import os
-import numpy
 
 # Read from data folder
 project_dir = os.path.dirname(os.path.realpath(__file__))
