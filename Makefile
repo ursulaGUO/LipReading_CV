@@ -18,4 +18,4 @@ endif
 
 # Clean target
 clean:
-	rm -rf $(OUTPUT_DIR)/clip_*.mp4 $(OUTPUT_DIR)/labels.csv
+	rm -rf $(OUTPUT_DIR)
