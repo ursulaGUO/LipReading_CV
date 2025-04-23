@@ -1,4 +1,4 @@
-# Variables (NO BACKSLASHES!)
+# Variables
 VIDEO_PATH = "/Users/blag/Documents/UChicago MS/2025 Spring/Computer Vision with DL/LipReading_CV/data/video_data/benchmark1.mp4"
 SUBTITLE_PATH = "/Users/blag/Documents/UChicago MS/2025 Spring/Computer Vision with DL/LipReading_CV/data/video_data/benchmark1_aligned.srt"
 OUTPUT_DIR = "/Users/blag/Documents/UChicago MS/2025 Spring/Computer Vision with DL/LipReading_CV/data/model_dataset"
