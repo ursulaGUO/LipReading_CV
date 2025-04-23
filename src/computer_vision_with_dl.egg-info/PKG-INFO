@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: computer-vision-with-dl
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: <3.13,>=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: ipykernel>=6.29.5
+Requires-Dist: matplotlib>=3.10.1
+Requires-Dist: opencv-python>=4.11.0.86
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: pysrt>=1.1.2
+Requires-Dist: tensorflow>=2.19.0
+
+# Data 
+
+The data are downloaded from Bernie Sanders' YouTube official account, where I only included videos where only Bernie is talking, and his face is (approximately) in the center. The video resolution is at 480p. 
+
+With the videos, I also downloaded subtitles in txt files.
+
+# Papers
+
+https://ieeexplore.ieee.org/abstract/document/9837012
+
+# Steps
+## Preprocessing
+In `src/builddata.py`, the file takes in a video and its corresponding `.src` subtitle file, and builds mini video data and a csv file that contains the lookup table for all the mini videos and their corresponding texual sentences. 
+
+
