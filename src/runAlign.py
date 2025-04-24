@@ -3,8 +3,8 @@ import os
 
 # file paths
 base_dir = os.path.dirname(os.path.abspath(__file__))
-audio_path = os.path.join(base_dir, "../data/video_data/benchmark1.wav")
-srt_output_path = os.path.join(base_dir, "../data/video_data/benchmark1_aligned.srt")
+audio_path = os.path.join(base_dir, "../data/video_data/benchmark2.mp4")
+srt_output_path = os.path.join(base_dir, "../data/video_data/benchmark2_aligned.srt")
 
 
 # Try the following if you don't have nvidia gpu chip
@@ -26,8 +26,12 @@ def seconds_to_srt_time(seconds):
 
 with open(srt_output_path, "w") as f:
     for i, word in enumerate(aligned_result["word_segments"], 1):
+        if "start" not in word or "end" not in word:
+            print(f"Skipping word without timing info: {word}")
+            continue
         start = seconds_to_srt_time(word["start"])
         end = seconds_to_srt_time(word["end"])
         f.write(f"{i}\n{start} --> {end}\n{word['word']}\n\n")
+
 
 print(f"SRT saved to: {srt_output_path}")

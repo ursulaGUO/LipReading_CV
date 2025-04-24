@@ -1,3 +1,5 @@
 data/video_data/Oligarchs Are Our Modern Day Kings.mp4
 data/video_data/We Are Living in Unprecedented Times.mp4
-data/model_dataset/*.mp4
+data/train
+data/test
+data/video1
